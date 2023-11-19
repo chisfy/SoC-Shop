@@ -1,0 +1,17 @@
+.errormessage {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.errormessage > h1 {
+    padding: 10px;
+    font-size: 50px;
+}
+
+.errormessage > p {
+    padding: 30px;
+}

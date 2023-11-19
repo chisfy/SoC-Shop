@@ -51,7 +51,7 @@ main {
 
 .footer {
     background-color: #73D2DE;
-    height: 15vh;
+    height: 10vh;
     text-align: center;
     display: flex;
     flex-direction: column;

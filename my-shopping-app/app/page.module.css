@@ -9,9 +9,15 @@
 
 .homepage > h1 {
     padding: 10px;
-    font-size: 50px;
+    font-size: 60px;
 }
 
-.homepage > p {
-    padding: 30px;
+.homepage > h3 {
+    padding: 10px;
+    font-weight: normal;
+}
+
+.homepage > h4 {
+    padding: 10px;
+    font-weight: normal;
 }

@@ -15,7 +15,7 @@ const mugList = await getMugs();
     return (
       <main className={styles.maincontainer}>
       <div className={styles.title}>
-      <h3>Don't be mug, buy a mug!</h3>
+      <h3>Don't be a mug, buy a mug!</h3>
       </div>
       <div className={styles.articlecontainer}>
         {mugList.map((mug) => (

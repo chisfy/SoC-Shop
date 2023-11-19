@@ -20,6 +20,7 @@ const mugItem = await getMugById(params.id);
     <main className={styles.itempage}>
     <div className={styles.container}>
         <h1 className={styles.title}>{mugItem.title}</h1>
+        <div className={styles.cardcontainer}>
           <article className={styles.singlecard}>
             <Image
               src={mugItem.img_url}
@@ -30,6 +31,7 @@ const mugItem = await getMugById(params.id);
             <p className={styles.description}>{mugItem.description}</p>
             <p>£{mugItem.price}</p>
           </article>
+        </div>
     </div>
     </main>
   )

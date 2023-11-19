@@ -1,7 +1,10 @@
+import Basket from "./Basket";
+
 export default function Cart() {
   return (
     <main>
-    <h1>Hello!</h1>
+    <h1>Shopping Basket:</h1>
+    <Basket/>
     </main>
   )
 }

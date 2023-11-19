@@ -13,6 +13,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+  
+    <>
     <html lang="en">
     <Head>
     <link rel="icon" href="../public/logo-51c754388b198e5bbb0d08a971ebbfa2.png"/>
@@ -20,8 +22,9 @@ export default function RootLayout({ children }) {
       <body>
       <Navbar/>
       {children}
-      </body>
       <Footer/>
+      </body>
     </html>
+    </>
   )
 }

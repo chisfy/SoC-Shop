@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import AddButton from "../components/AddButton";
 
 async function getMugs() {
     const res = await fetch("http://localhost:4000/mugs");
@@ -21,13 +22,15 @@ const mugList = await getMugs();
               alt="Picture of a custom mug"
               width="98"
               height="131"
+              loading="eager" 
+              priority="high"
             ></Image>
             <p>{mug.title}</p>
             <p>£{mug.price}</p>
             <Link href={`/mug-collection/${mug.id}`}>
             <button>View Item</button>
             </Link>
-            <button>Add to Basket</button>
+            <AddButton mug={mug} />
           </article>
         ))}
       </>

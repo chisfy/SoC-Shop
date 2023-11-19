@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <Head>
     <link rel="icon" href="../public/logo-51c754388b198e5bbb0d08a971ebbfa2.png"/>
     </Head>
-      <body>
+      <body className={workSans.className}>
       <Navbar/>
       {children}
       <Footer/>

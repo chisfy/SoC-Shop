@@ -1,9 +1,10 @@
 import Basket from "./Basket";
+import styles from "./styles.module.css"
 
 export default function Cart() {
   return (
-    <main>
-    <h1>Shopping Basket:</h1>
+    <main className={styles.cartpage}>
+    <h1>Basket:</h1>
     <Basket/>
     </main>
   )

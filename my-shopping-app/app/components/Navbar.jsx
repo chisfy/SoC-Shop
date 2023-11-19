@@ -1,9 +1,18 @@
 import Link from "next/link"
+import Image from "next/image"
+import Logo from "../../public/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
 
 export default function Navbar() {
   return (
-    <nav>
+    <nav className="nav-bar">
+    <Image
+    src={Logo}
+    width="110"
+    height="110"
+    alt="SoC logo"
+    />
     <h1>SoC Shop</h1>
+    <div className="links">
     <Link href="/">
     <h3>Home</h3>
     </Link>
@@ -13,6 +22,7 @@ export default function Navbar() {
     <Link href="/mug-collection">
     <h3>Catalog</h3>
     </Link>
+    </div>
     </nav>
   )
 }

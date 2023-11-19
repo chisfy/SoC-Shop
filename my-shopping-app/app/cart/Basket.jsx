@@ -10,9 +10,7 @@ console.log(basket);
 
 return (
     <div>
-      <ul>
-        <li>{basket.title}</li>
-      </ul>
+    <p>Cart is currently empty!</p>
     </div>
   );
 };

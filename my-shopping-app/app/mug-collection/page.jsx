@@ -17,9 +17,8 @@ const mugList = await getMugs();
       <div className={styles.title}>
       <h3>Don't be mug, buy a mug!</h3>
       </div>
-      <>
+      <div className={styles.articlecontainer}>
         {mugList.map((mug) => (
-          <div className={styles.articlecontainer}>
           <article key={mug.id} className={styles.card}>
             <Image
               src={mug.img_url}
@@ -38,9 +37,8 @@ const mugList = await getMugs();
             <AddButton mug={mug} />
             </div>
           </article>
-          </div>
         ))}
-      </>
+        </div>
       </main>
     );
   }

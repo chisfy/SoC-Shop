@@ -3,7 +3,6 @@ import Link from "next/link";
 
 async function getMugs() {
     const res = await fetch("http://localhost:4000/mugs");
-
     return res.json();
 }
 
@@ -24,7 +23,6 @@ const mugList = await getMugs();
               height="131"
             ></Image>
             <p>{mug.title}</p>
-            <p>{mug.description}</p>
             <p>£{mug.price}</p>
             <Link href={`/mug-collection/${mug.id}`}>
             <button>View Item</button>

@@ -5,6 +5,7 @@ import Logo from "../../public/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
 export default function Navbar() {
   return (
     <nav className="nav-bar">
+    <div className="img-logo">
     <Image
     src={Logo}
     width="110"
@@ -12,6 +13,7 @@ export default function Navbar() {
     alt="SoC logo"
     />
     <h1>SoC Shop</h1>
+    </div>
     <div className="links">
     <Link href="/">
     <h3>Home</h3>

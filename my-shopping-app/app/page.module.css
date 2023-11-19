@@ -4,6 +4,7 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    height: 70vh;
 }
 
 .homepage > h1 {

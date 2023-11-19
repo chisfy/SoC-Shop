@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .nav-bar {
@@ -10,8 +11,10 @@
     align-items: center;
 }
 
-.nav-bar > img {
-    margin-inline: 10px;
+.img-logo {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
 }
 
 .nav-bar > h1 {
@@ -43,15 +46,35 @@ a:visited {
 }
 
 main {
-    height: 70vh;
     background-color: #CBF3F0;
 }
 
 .footer {
     background-color: #73D2DE;
-    height: 10vh;
+    height: 15vh;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media screen and (min-width: 450px) {
+
+    .nav-bar {
+        background-color: #73D2DE;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        color: black;
+        padding-right: 15px;
+    }
 }

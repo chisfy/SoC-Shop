@@ -3,6 +3,7 @@ import './globals.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Head from 'next/head'
+import { AddToCartProvider } from '../context/addtocartcontext.js'
 
 const workSans = Work_Sans({ subsets: ['latin'] })
 
@@ -20,7 +21,9 @@ export default function RootLayout({ children }) {
     </Head>
       <body className={workSans.className}>
       <Navbar/>
+      <AddToCartProvider>
       {children}
+      </AddToCartProvider>
       <Footer/>
       </body>
     </html>

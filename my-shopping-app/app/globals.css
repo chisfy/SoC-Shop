@@ -47,6 +47,9 @@ a:visited {
 
 main {
     background-color: #CBF3F0;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer {

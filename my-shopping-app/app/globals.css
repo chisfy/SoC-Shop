@@ -47,7 +47,7 @@ a:visited {
 
 main {
     background-color: #CBF3F0;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
 }

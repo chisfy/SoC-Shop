@@ -1,14 +1,20 @@
 "use client"
 
-import useBasket from "../hooks/useBasket"
+import { AddToCartContext } from "@/context/addtocartcontext";
+import { useContext } from "react";
 
 export default function AddButton({mug}) {
     
-const { addToBasket } = useBasket();
+  const { basket, setBasket } = useContext(AddToCartContext);
+
+  const addToBasket = () => {
+    setBasket([...basket, mug]);
+    console.log(basket);
+  };
 
   return (
     <>
-    <button onClick={() => addToBasket(mug)}>Add to Basket</button>
+    <button onClick={addToBasket}>Add to Basket</button>
     </>
   )
 }

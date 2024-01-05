@@ -1,10 +1,10 @@
 "use client"
 import { createContext, useContext, useState } from "react";
 
-const AddToCartContext = createContext();
+export const AddToCartContext = createContext();
 
 export function AddToCartProvider({ children }) {
-    const [basket, setBasket] = useState(null);
+    const [basket, setBasket] = useState([]);
     
     return (
         <AddToCartContext.Provider value={{ basket, setBasket }}>

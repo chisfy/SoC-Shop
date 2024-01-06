@@ -18,15 +18,27 @@ const buyNow = () => {
     console.error("Invalid basket data:", basket);
     return;
   }
-  
+
   setShowNotification(true);
   
-  // Hide the notification after a brief delay (e.g., 2 seconds)
   setTimeout(() => {
     setShowNotification(false);
     setBasket([]);
   }, 2000);
 };
+
+//figuring out how add quantity to basket
+//update db.json to include quantity
+//usestate to set quantity
+//2 buttons to add and remove quantity
+//number in a white box to display quantity
+
+
+//price in card and total must reflect quantity
+//
+
+//make it all work in mobile view
+
 
 return (
   <>
@@ -62,7 +74,7 @@ return (
           <h2>Total: £{total.toFixed(2)}</h2>
           <button onClick={buyNow}>Buy Now</button>
           {showNotification && (
-        <div style={{ color: "black", marginTop: "5px" }}>
+        <div style={{ color: "black", marginBlock: "10px" }}>
           Congratulations! You have bought some mugs!
         </div>
       )}

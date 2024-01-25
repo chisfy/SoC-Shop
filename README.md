@@ -13,12 +13,14 @@
 
 ## ⛏️ Tech Stack
 
-<p align="center">
-<a href="https://(https://www.javascript.com//">JavaScript</a> &
-<a href="https://react.dev/">React</a> &
-<a href="https://nextjs.org/">NextJS</a>
-</p>
-  
+<section align="center">
+<a href="https://www.javascript.com/"><img src="https://github.com/chisfy/SoC-Shop/assets/137444313/e2ecd003-b9d2-49ea-9471-8d53585476c0)" alt="JS_logo" height="100" width="150"/></a>
+<a href="https://react.dev/"><img src="https://github.com/chisfy/SoC-Shop/assets/137444313/3931383a-9636-4eae-b0bd-ba58b0517597" alt="React_logo" height="100" width="110"/></a>
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<a href="https://nextjs.org/"><img src="https://github.com/chisfy/SoC-Shop/assets/137444313/c70b1c1c-8ed7-47aa-bc8c-cfc6969b6629" alt="Nextjs_logo" height="100" width="150"/></a>
+</section>
+
 ## 🏫 Lessons Learned
 
 <p align="center">

@@ -14,8 +14,9 @@
 ## ⛏️ Tech Stack
 
 <p align="center">
-<a href="https://www.typescriptlang.org/">TypeScript</a> &
+<a href="https://(https://www.javascript.com//">JavaScript</a> &
 <a href="https://react.dev/">React</a>
+<a href="https://nextjs.org/">NextJS</a>
 </p>
   
 ## 🏫 Lessons Learned

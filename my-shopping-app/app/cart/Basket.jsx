@@ -5,13 +5,15 @@ import { useContext, useState } from "react";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import Link from "next/link";
-import Quantity from "../components/Quantity";
 
 export default function Basket() {
   const { basket, setBasket } = useContext(AddToCartContext);
   const [showNotification, setShowNotification] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
-  const total = basket.reduce((sum, mug) => sum + mug.price, 0);
+  function getTotalPrice() {
+    return basket.reduce((sum, mug) => sum + mug.price * quantity, 0);
+  }
 
   console.log(basket)
 
@@ -29,8 +31,16 @@ export default function Basket() {
     }, 2000);
   };
 
+  function increaseQuantity(mugId) {
+    let count = quantity;
+    setQuantity(count += 1);
+  };
+
+  function decreaseQuantity(mugId) {
+    let count = quantity;
+    setQuantity(count -= 1);
+  };
   //figuring out how add quantity to basket
-  //update db.json to include quantity
   //usestate to set quantity
   //2 buttons to add and remove quantity
   //number in a white box to display quantity
@@ -65,21 +75,21 @@ export default function Basket() {
             <p>{mug.title}</p>
             <p>£{mug.price}</p>
             <div className={styles.quantitybox}>
-              <button className={styles.plusButton}>
-                <strong>+</strong>
+              <button onClick={() => increaseQuantity(mug.id)} className={styles.plusButton}>
+                +
               </button>
               <div className={styles.quantityno}>
-                <p>{mug.quantity}</p>
+                <p>{quantity}</p>
               </div>
-              <button className={styles.plusButton}>
-                <strong>-</strong>
+              <button onClick={() => decreaseQuantity(mug.id)}className={styles.plusButton}>
+                -
               </button>
             </div>
           </article>
         ))}
         {basket.length > 0 && (
           <div className={styles.total}>
-            <h2>Total: £{total.toFixed(2)}</h2>
+            <h2>Total: £{getTotalPrice().toFixed(2)}</h2>
             <button onClick={buyNow}>Buy Now</button>
             {showNotification && (
               <div style={{ color: "black", marginBlock: "10px" }}>

@@ -43,7 +43,6 @@
     margin-block: 8px;
     font-style: italic;
     font-weight: bold;
-    margin-right: 20px;
 }
 
 .card button {
@@ -102,4 +101,21 @@
     margin-inline: 18px;
     justify-content: center;
     align-items: center;
+}
+
+.plus-button {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 700px) {
+
+    .quantitybox {
+        flex-direction: column;
+    }
+
+    .quantityno {
+        height: 30px;
+        width: 30px;
+    }
+
 }

@@ -43,6 +43,7 @@
     margin-block: 8px;
     font-style: italic;
     font-weight: bold;
+    margin-right: 20px;
 }
 
 .card button {
@@ -55,12 +56,13 @@
     color: black;
     padding: 15px;
     margin-block: 10px;
+    font-family: inherit;
 } 
 
 .emptybasket {
     line-height: 2;
 }
-.emptybasket button {
+.emptybasketbutton  {
     background-color: #FFBF69;
     color: #fff;
     border: none;
@@ -69,6 +71,9 @@
     color: black;
     padding: 15px;
     margin-block: 10px;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 16px;
 }
 
 .total button {
@@ -80,4 +85,21 @@
     color: black;
     padding: 15px;
     margin-block: 10px;
+    font-family: inherit;
+}
+
+.quantitybox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quantityno {
+    display: flex;
+    background-color: #fff;
+    height: 40px;
+    width: 40px;
+    margin-inline: 18px;
+    justify-content: center;
+    align-items: center;
 }

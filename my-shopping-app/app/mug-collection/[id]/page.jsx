@@ -6,7 +6,8 @@ async function getMugById(id) {
     const res = await fetch(`http://localhost:4000/mugs/${id}`);
 
     if(!res.ok) {
-        notFound();
+      console.error("ERROR, CAN'T FETCH MUGS");
+      notFound();
     }
 
     return res.json();

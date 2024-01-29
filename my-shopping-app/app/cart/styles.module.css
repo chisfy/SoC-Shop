@@ -107,6 +107,16 @@
     font-weight: bold;
 }
 
+
+.removeButton {
+    margin: 0;
+}
+
+.trash {
+   scale: 1.5;
+   margin: 0;
+}
+
 @media screen and (max-width: 700px) {
 
     .quantitybox {
@@ -117,5 +127,9 @@
         height: 30px;
         width: 30px;
     }
+
+    .trash {
+        scale: 1; 
+     }
 
 }

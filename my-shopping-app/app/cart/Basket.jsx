@@ -32,18 +32,40 @@ export default function Basket() {
   };
 
   function increaseQuantity(mugId) {
+    
+    const updatedBasket = basket.map(item => {
+      if (item.id === mugId) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    
+    setBasket(updatedBasket);
     let count = quantity;
     setQuantity(count += 1);
   };
 
-  function decreaseQuantity(mugId) {
+  function decreaseQuantity() {
     let count = quantity;
     setQuantity(count -= 1);
 
-    if (quantity >= 0) {
+    if (quantity <= 0) {
       setQuantity(0);
     }
   };
+
+  const removeItem = (mugId) => {
+    setBasket((prevBasket) => prevBasket.filter((mug) => mug.id !== mugId));
+  };
+  
+  // const updateddecreasedBasket = basket.map(item => {
+  //   if (item.id === id && item.quantity > 1) {
+  //     return { ...item, quantity: item.quantity - 1 };
+  //   }
+  //   return item;
+  // }).filter(item => item.quantity > 0);
+
+
   //figuring out how add quantity to basket
   //usestate to set quantity
   //2 buttons to add and remove quantity
@@ -79,14 +101,22 @@ export default function Basket() {
             <p>{mug.title}</p>
             <p>£{mug.price}</p>
             <div className={styles.quantitybox}>
-              <button onClick={() => increaseQuantity(mug.id)} className={styles.plusButton}>
+              <button onClick={() => increaseQuantity()} className={styles.plusButton}>
                 +
               </button>
               <div className={styles.quantityno}>
                 <p>{quantity}</p>
               </div>
-              <button onClick={() => decreaseQuantity(mug.id)}className={styles.plusButton}>
+              <button onClick={() => decreaseQuantity()}className={styles.plusButton}>
                 -
+              </button>
+            </div>
+            <div className={styles.removeButton}>
+            <button
+                onClick={() => removeItem(mug.id)}
+                className={styles.trash}
+              >
+                🗑
               </button>
             </div>
           </article>

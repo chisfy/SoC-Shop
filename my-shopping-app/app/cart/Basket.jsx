@@ -32,15 +32,6 @@ export default function Basket() {
   };
 
   function increaseQuantity(mugId) {
-    
-    const updatedBasket = basket.map(item => {
-      if (item.id === mugId) {
-        return { ...item, quantity: item.quantity + 1 };
-      }
-      return item;
-    });
-    
-    setBasket(updatedBasket);
     let count = quantity;
     setQuantity(count += 1);
   };

@@ -48,14 +48,6 @@ export default function Basket() {
   const removeItem = (mugId) => {
     setBasket((prevBasket) => prevBasket.filter((mug) => mug.id !== mugId));
   };
-  
-  // const updateddecreasedBasket = basket.map(item => {
-  //   if (item.id === id && item.quantity > 1) {
-  //     return { ...item, quantity: item.quantity - 1 };
-  //   }
-  //   return item;
-  // }).filter(item => item.quantity > 0);
-
 
   //figuring out how add quantity to basket
   //usestate to set quantity

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import Logo from "../../public/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
+import CartButtonLink from "./CartButtonLink"
 
 export default function Navbar() {
   return (
@@ -18,9 +19,7 @@ export default function Navbar() {
     <Link href="/">
     <h3>Home</h3>
     </Link>
-    <Link href="/cart">
-    <h3>Cart</h3>
-    </Link>
+    <CartButtonLink/>
     <Link href="/mug-collection">
     <h3>Catalog</h3>
     </Link>

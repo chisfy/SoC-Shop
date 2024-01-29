@@ -9,10 +9,13 @@ import Link from "next/link";
 export default function Basket() {
   const { basket, setBasket } = useContext(AddToCartContext);
   const [showNotification, setShowNotification] = useState(false);
-  const [quantity, setQuantity] = useState(1);
+  const [quantities, setQuantities] = useState(
+    basket.reduce((acc, mug) => ({ ...acc, [mug.id]: 1 }), {})
+  );
+
 
   function getTotalPrice() {
-    return basket.reduce((sum, mug) => sum + mug.price * quantity, 0);
+    return basket.reduce((sum, mug) => sum + mug.price * (quantities[mug.id] || 0), 0);
   }
 
   console.log(basket)
@@ -31,18 +34,18 @@ export default function Basket() {
     }, 2000);
   };
 
-  function increaseQuantity(mugId) {
-    let count = quantity;
-    setQuantity(count += 1);
+ const increaseQuantity = (mugId) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [mugId]: (prevQuantities[mugId] || 0) + 1,
+    }));
   };
 
-  function decreaseQuantity() {
-    let count = quantity;
-    setQuantity(count -= 1);
-
-    if (quantity <= 0) {
-      setQuantity(0);
-    }
+  const decreaseQuantity = (mugId) => {
+    setQuantities((prevQuantities) => ({
+      ...prevQuantities,
+      [mugId]: Math.max((prevQuantities[mugId] || 0) - 1, 0),
+    }));
   };
 
   const removeItem = (mugId) => {
@@ -84,13 +87,13 @@ export default function Basket() {
             <p>{mug.title}</p>
             <p>£{mug.price}</p>
             <div className={styles.quantitybox}>
-              <button onClick={() => increaseQuantity()} className={styles.plusButton}>
+              <button onClick={() => increaseQuantity(mug.id)} className={styles.plusButton}>
                 +
               </button>
               <div className={styles.quantityno}>
-                <p>{quantity}</p>
+                <p>{quantities[mug.id]}</p>
               </div>
-              <button onClick={() => decreaseQuantity()}className={styles.plusButton}>
+              <button onClick={() => decreaseQuantity(mug.id)}className={styles.plusButton}>
                 -
               </button>
             </div>

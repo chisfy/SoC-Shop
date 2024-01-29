@@ -9,7 +9,7 @@ The one-stop shop for all your shopping needs - don't be a mug, buy a mug!
 ## 🏁 Visit The Website
 
 <p align="center">
-<a href="soc-shop.vercel.app">Soc Shop</a>
+<a href="https://soc-shop.vercel.app/">Soc Shop</a>
 </p>
 
 <p align="center">

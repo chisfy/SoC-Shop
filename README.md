@@ -1,4 +1,5 @@
 <h1 align="center"> 
+  🛒 SoC Shop! 🛒
 </h1>
 
 <p align="center">  
@@ -9,6 +10,16 @@
 
 <p align="center">
 <a href="">Soc Shop</a>
+</p>
+
+<p align="center">
+<a href="">Blog Post</a>
+</p>
+
+## ✨ Inspiration
+
+<p align="center">
+This project was based on a hackathon, where I felt my skills fell short and the hackathon was difficult and we couldn't quite figure out how to get the mugs to appear in the cart page. I decided to explore NextJS further to understand the structure and uncover the solution, it was only until my work in the final project that I uncovered the solution...useContext!
 </p>
 
 ## ⛏️ Tech Stack

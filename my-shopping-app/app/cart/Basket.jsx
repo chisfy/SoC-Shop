@@ -39,6 +39,10 @@ export default function Basket() {
   function decreaseQuantity(mugId) {
     let count = quantity;
     setQuantity(count -= 1);
+
+    if (quantity >= 0) {
+      setQuantity(0);
+    }
   };
   //figuring out how add quantity to basket
   //usestate to set quantity

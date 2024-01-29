@@ -44,10 +44,13 @@ This project was based on a hackathon, where I felt my skills fell short and the
 ## 💭 Reflections
 <p align="center">
 What went well? <br>
+This was built mobile first, and this greatly helped my understanding of responsive design and CSS positioning and styling.
 </p>
 
 <p align="center">
 What could be improved? <br>
+Improvement in functionality for the carts so the cart could reflect the number in the basket as a more visual cue instead of just turning red!
+Currently, duplicate of mugs are just repeated in the cart page however this could be improved by instead just updating the quantity to be updated to 2!
 </p>
 
 ## 🎥 Demo

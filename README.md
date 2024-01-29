@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">  
-
+The one-stop shop for all your shopping needs - don't be a mug, buy a mug!
 </p>
 
 ## 🏁 Visit The Website

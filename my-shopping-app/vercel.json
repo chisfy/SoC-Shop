@@ -1,0 +1,9 @@
+{
+    "routes": [
+      {
+        "src": "/mugs",
+        "dest": "http://localhost:4000/mugs"
+      }
+    ]
+  }
+  

@@ -1,14 +1,25 @@
 <h1 align="center"> 
+  🛒 SoC Shop! 🛒
 </h1>
 
 <p align="center">  
-
+The one-stop shop for all your shopping needs - don't be a mug, buy a mug!
 </p>
 
 ## 🏁 Visit The Website
 
 <p align="center">
 <a href="">Soc Shop</a>
+</p>
+
+<p align="center">
+<a href="">Blog Post</a>
+</p>
+
+## ✨ Inspiration
+
+<p align="center">
+This project was based on a hackathon, where I felt my skills fell short and the hackathon was difficult and we couldn't quite figure out how to get the mugs to appear in the cart page. I decided to explore NextJS further to understand the structure and uncover the solution, it was only until my work in the final project that I uncovered the solution...useContext!
 </p>
 
 ## ⛏️ Tech Stack
@@ -33,10 +44,13 @@
 ## 💭 Reflections
 <p align="center">
 What went well? <br>
+This was built mobile first, and this greatly helped my understanding of responsive design and CSS positioning and styling.
 </p>
 
 <p align="center">
 What could be improved? <br>
+Improvement in functionality for the carts so the cart could reflect the number in the basket as a more visual cue instead of just turning red!
+Currently, duplicate of mugs are just repeated in the cart page however this could be improved by instead just updating the quantity to be updated to 2!
 </p>
 
 ## 🎥 Demo

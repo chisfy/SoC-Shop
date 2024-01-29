@@ -19,7 +19,7 @@ The one-stop shop for all your shopping needs - don't be a mug, buy a mug!
 ## ✨ Inspiration
 
 <p align="center">
-This project was based on a hackathon, where I felt my skills fell short and the hackathon was difficult as we couldn't quite figure out how to get the mugs to appear in the cart page. I decided to explore NextJS further to understand the structure and uncover the solution, it was only until my work in the final project that I uncovered the solution...useContext!
+This project was based on a time limited hackathon, where I felt my skills fell short and the hackathon was difficult as we couldn't quite figure out how to get the mugs to appear in the cart page. I decided to explore NextJS further to understand the structure and uncover the solution, it was only until my work in the final project that I discovered the solution...useContext!
 </p>
 
 ## ⛏️ Tech Stack
@@ -64,6 +64,11 @@ Currently, duplicate of mugs are just repeated in the cart page however this cou
 Or, the basket component could possibly be broken down further!
 Testing; I have yet to implement written tests, relying on developer environment testing and deployment checks.
 </p>
+
+## ↩ Previous Attempt
+<section align="center">
+<img src="https://github.com/chisfy/SoC-Shop/assets/137444313/bb1c1785-cb8d-4115-b5e2-2df7367ccfe9" alt="hackathon version" height="450" />
+</section>
 
 ## 🎥 Demo
 

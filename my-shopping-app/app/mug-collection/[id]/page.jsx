@@ -6,47 +6,41 @@ import { readFileAndParseJSON } from "../page";
 
 async function getMugById(id) {
   const mugList = await readFileAndParseJSON();
-  const mugItem = mugList.find((mug) => mug.id === id);
+  console.log(mugList);
+  const mugItem = mugList.find(((mug) => mug.id.toString() === id.toString()));
+
+  if (!mugItem) {
+    notFound();
+  }
+
   return mugItem;
 }
 
-export default async function IndividualMug({ mugItem }) {
-
-  if (!mugItem) {
-    return notFound();
-  }
+export default async function IndividualMug({ params }) {
   
-  console.log(mugItem);
+  const singleMug = await getMugById(params.id);
+  
+  console.log(singleMug);
 
   return (
     <main className={styles.itempage}>
     <div className={styles.container}>
-        <h1 className={styles.title}>{mugItem.title}</h1>
+        <h1 className={styles.title}>{singleMug.title}</h1>
         <div className={styles.cardcontainer}>
           <article className={styles.singlecard}>
             <Image
-              src={mugItem.img_url}
+              src={singleMug.img_url}
               alt="Picture of a custom mug"
               width="196"
               height="262"
             ></Image>
-            <p className={styles.description}>{mugItem.description}</p>
-            <p>£{mugItem.price}</p>
+            <p className={styles.description}>{singleMug.description}</p>
+            <p>£{singleMug.price}</p>
           </article>
         </div>
     </div>
     </main>
   )
-}
-
-// Fetch data for individual mug
-export async function getInitialProps({ params }) {
-  const mugItem = await getMugById(params.id);
-  return {
-    props: {
-      mugItem,
-    },
-  };
 }
 
 // Specify dynamic paths for individual mugs

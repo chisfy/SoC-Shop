@@ -12,6 +12,10 @@ The one-stop shop for all your shopping needs - don't be a mug, buy a mug!
 <a href="https://soc-shop.vercel.app/">Soc Shop</a>
 </p>
 
+<p align="center">
+<a href="https://sites.google.com/view/coding-and-me/blogs/next-js-up-in-react">Blog Post</a>
+</p>
+
 ## ✨ Inspiration
 
 <p align="center">
@@ -51,6 +55,7 @@ This project was based on a time limited hackathon, where I felt my skills fell 
 What went well? <br>
 This was built mobile first, and this greatly helped my understanding of responsive design as well as CSS positioning and styling.
 I enjoyed building the stylised look and the CSS application was the smoothest part of this project!
+The design was built with accessability built in mind, using tools to check for cotnrasts and such. The result a score of 98, 100 & 100 in Lighthouse!
 </p>
 
 <p align="center">

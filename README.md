@@ -12,10 +12,6 @@ The one-stop shop for all your shopping needs - don't be a mug, buy a mug!
 <a href="https://soc-shop.vercel.app/">Soc Shop</a>
 </p>
 
-<p align="center">
-<a href="">Blog Post</a>
-</p>
-
 ## ✨ Inspiration
 
 <p align="center">
@@ -72,4 +68,4 @@ Testing; I have yet to implement written tests, relying on developer environment
 
 ## 🎥 Demo
 
-<video align="center" src=""/>
+<video align="center" src="https://github.com/chisfy/SoC-Shop/assets/137444313/ad569ccb-0bbe-42f8-8d60-4e24c2e10649"/>

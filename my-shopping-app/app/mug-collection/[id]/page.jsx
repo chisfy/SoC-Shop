@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { notFound } from "next/navigation";
 import styles from "./page.module.css"
 import { readFileAndParseJSON } from "../page";
 
@@ -9,20 +8,12 @@ async function getMugById(id) {
   console.log(mugList);
   const mugItem = mugList.find(((mug) => mug.id.toString() === id.toString()));
 
-  if (!mugItem) {
-    return notFound();
-  } 
-
   return mugItem;
 }
 
 export default async function IndividualMug({ params }) {
   
   const singleMug = await getMugById(params.id);
-
-  if (!singleMug) {
-    return notFound();
-  }
 
   console.log(singleMug);
 

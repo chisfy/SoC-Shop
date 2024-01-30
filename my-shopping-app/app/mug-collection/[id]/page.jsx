@@ -9,16 +9,16 @@ async function getMugById(id) {
   console.log(mugList);
   const mugItem = mugList.find(((mug) => mug.id.toString() === id.toString()));
 
+  if (!id) {
+    return notFound();
+  } 
+
   return mugItem;
 }
 
 export default async function IndividualMug({ params }) {
   
   const singleMug = await getMugById(params.id);
-  
-  if (!singleMug) {
-    return notFound();
-  } 
 
   console.log(singleMug);
 

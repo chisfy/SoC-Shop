@@ -12,6 +12,7 @@ export default function Navbar() {
     width="110"
     height="110"
     alt="SoC logo"
+    priority={true}
     />
     <h1>SoC Shop</h1>
     </div>

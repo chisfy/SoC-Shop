@@ -1,21 +1,22 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css"
+import { readFileAndParseJSON } from "../page";
+
 
 async function getMugById(id) {
-    const res = await fetch(`http://localhost:4000/mugs/${id}`);
-
-    if(!res.ok) {
-      console.error("ERROR, CAN'T FETCH MUGS");
-      notFound();
-    }
-
-    return res.json();
+  const mugList = await readFileAndParseJSON();
+  const mugItem = mugList.find((mug) => mug.id === id);
+  return mugItem;
 }
 
-export default async function IndividualMug({ params }) {
-    
-const mugItem = await getMugById(params.id);
+export default async function IndividualMug({ mugItem }) {
+
+  if (!mugItem) {
+    return notFound();
+  }
+  
+  console.log(mugItem);
 
   return (
     <main className={styles.itempage}>
@@ -36,4 +37,26 @@ const mugItem = await getMugById(params.id);
     </div>
     </main>
   )
+}
+
+// Fetch data for individual mug
+export async function getInitialProps({ params }) {
+  const mugItem = await getMugById(params.id);
+  return {
+    props: {
+      mugItem,
+    },
+  };
+}
+
+// Specify dynamic paths for individual mugs
+export async function getStaticPaths() {
+  const mugList = await readFileAndParseJSON();
+  const paths = mugList.map((mug) => ({
+    params: { id: mug.id.toString() },
+  }));
+  return {
+    paths,
+    fallback: true,
+  };
 }

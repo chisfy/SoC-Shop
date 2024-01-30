@@ -2,15 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import AddButton from "../components/AddButton";
 import styles from "./styles.module.css"
+import { promises as fs } from 'fs';
 
-async function getMugs() {
-    const res = await fetch("http://localhost:4000/mugs");
-    return res.json();
+
+export async function readFileAndParseJSON() { 
+
+    // Read the contents of db.json
+    const file = await fs.readFile(process.cwd() + '/app/db.json', 'utf8');
+    
+    // Parse the JSON data
+    const mugList = JSON.parse(file);
+    // Output the parsed data
+    return mugList;
 }
+
 
 export default async function MugItems() {
 
-const mugList = await getMugs();
+    // Call the function
+    const mugList = await readFileAndParseJSON();
+    console.log(mugList);
 
     return (
       <main className={styles.maincontainer}>

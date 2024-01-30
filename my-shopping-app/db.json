@@ -1,52 +1,19 @@
 {
-    "mugs": [
-      {
-        "id": 1,
-        "quantity": 1,
-        "title": "Mug Joe",
-        "description": "A timeless classic, this mug is perfect for your everyday coffee or tea.",
-        "price": 9.99,
-        "img_url": "/mugs_pics/joe_mug.jpg"
-      },
-      {
-        "id": 2,
-        "quantity": 1,
-        "title": "Mug Fred",
-        "description": "Embark on your morning adventures with this rugged mug, designed for the outdoorsy types.",
-        "price": 14.99,
-        "img_url": "/mugs_pics/fred_mug.jpg"
-      },
-      {
-        "id": 3,
-        "quantity": 1,
-        "title": "Mug Fyza",
-        "description": "Take a trip down memory lane with this vintage-inspired mug, a perfect addition to your collection.",
-        "price": 12.99,
-        "img_url": "/mugs_pics/fyza_mug.jpg"
-      },
-      {
-        "id": 4,
-        "quantity": 1,
-        "title": "Mug Hannah",
-        "description": "Brighten up your mornings with this colorful mug, guaranteed to bring a smile to your face.",
-        "price": 8.99,
-        "img_url": "/mugs_pics/hannah_mug.jpg"
-      },
-      {
-        "id": 5,
-        "quantity": 1,
-        "title": "Mug Marco",
-        "description": "Wrap your hands around this cozy mug, designed to keep your drinks warm for longer.",
-        "price": 11.99,
-        "img_url": "/mugs_pics/marco_mug.jpg"
-      },
-      {
-        "id": 6,
-        "quantity": 1,
-        "title": "Mug Mickey",
-        "description": "Simplicity at its finest, this minimalistic mug is perfect for those who appreciate clean design",
-        "price": 7.99,
-        "img_url": "/mugs_pics/mickey_mug.jpg"
-      }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
